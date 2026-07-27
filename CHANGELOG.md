@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/looker-open-source/looker-skills/compare/looker-skills-v0.4.0...looker-skills-v0.5.0) (2026-07-27)
+
+
+### Features
+
+* **skills:** add looker-architect master developer skill ([17a42f3](https://github.com/looker-open-source/looker-skills/commit/17a42f3bdeab9b232d4ecb02fb40dfa2fe524884))
+
 ## [0.4.0](https://github.com/looker-open-source/looker-skills/compare/looker-skills-v0.3.0...looker-skills-v0.4.0) (2026-07-23)
 
 
