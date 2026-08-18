@@ -99,20 +99,12 @@ Always verify that your LookML is valid and generates the expected SQL and query
     *   Get tests: `looker-cli api project all_lookml_tests {project_id}`
     *   Run tests: `looker-cli api project run_lookml_test {project_id}`
 
-## 4. Creating and Syncing Files (CLI)
+## 4. Creating and Editing Files (Local Filesystem & Auto-Sync)
 
-Files can be created and updated either via the Looker VS Code extension on save, or directly using the CLI:
+In this project, write and edit LookML files directly in the local repository workspace directory (e.g., `views/`, `explores/`, `models/`).
 
-```bash
-# Ensure dev workspace
-looker-cli session update dev
-
-# Create new file
-looker-cli project file create {project_id} views/{view_name}.view.lkml /path/to/local_view.view.lkml
-
-# Update existing file
-looker-cli project file update {project_id} views/{view_name}.view.lkml /path/to/local_view.view.lkml
-```
+> [!IMPORTANT]
+> **No CLI File Sync Needed**: The **Looker VS Code Extension** automatically syncs local file edits, creations, and deletions directly to the Looker Dev workspace on save. Agents **do NOT need to execute** `looker-cli project file create` or `looker-cli project file update`.
 
 ### Naming & Uniqueness Requirements
 

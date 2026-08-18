@@ -334,25 +334,18 @@ Combine `--template` with piping or file redirection to construct and submit POS
 
 ## 5. File Synchronization, Validation & Querying
 
-### Pushing Local Files to Dev Workspace
+### Automatic File Synchronization (VS Code Looker Extension)
 
-Always ensure your session is targeting the `dev` workspace before updating or creating files:
+In this development environment, **you do NOT need to manually upload or sync files via the CLI**. 
 
-```bash
-# Ensure dev workspace
-looker-cli session update dev
+The **Looker VS Code Extension** is active and automatically synchronizes all local file edits, creations, and deletions directly to your Looker Dev workspace in real time when files are saved.
 
-# Push updated file content from local disk to Looker
-looker-cli project file update <project_id> <filepath_in_project> <local_file_path>
-
-# Push new file to Looker
-looker-cli project file create <project_id> <filepath_in_project> <local_file_path>
-
-# Inspect remote file content
-looker-cli project file cat <project_id> <filepath_in_project>
-```
-
-*Note: When using the Looker VS Code Extension, saving files in the editor automatically syncs them to the Looker dev workspace via API.*
+*   **Simply edit or create files on local disk** in your workspace directory (e.g., `views/`, `models/`).
+*   **Do NOT execute** `looker-cli project file create` or `looker-cli project file update` unless operating in a headless non-VS Code environment where automated syncing is unavailable.
+*   To inspect the remote file content on Looker if needed:
+    ```bash
+    looker-cli project file cat <project_id> <filepath_in_project>
+    ```
 
 ### Validating LookML
 
